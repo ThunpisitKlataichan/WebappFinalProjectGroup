@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-800;
+  }
+}
+
+/* ทำ utility ใช้ซ้ำ เช่น ปุ่มหลัก */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 text-sm font-semibold text-white bg-blue-600 rounded hover:bg-blue-700;
+  }
+}

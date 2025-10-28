@@ -10,7 +10,7 @@ function Slideimage(){
     return<>
  <section className="relative w-full overflow-hidden slider flex flex-col rounded-2xl shadow-md ">
       <div className="relative w-full pt-[56.25%]">
-        
+
         <div className="slider-track absolute inset-0 flex w-[400%] h-full animate-[Pic4_20s_linear_infinite]">
           <img src={FenderSlide} alt="Fender Product"
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
@@ -22,7 +22,7 @@ function Slideimage(){
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
         </div>
 
-        
+
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-white text-3xl sm:text-5xl font-bold drop-shadow ">Music 2 hand</h1>
           <p className="text-white/90 mt-2 max-w-xl text-sm sm:text-base ">
