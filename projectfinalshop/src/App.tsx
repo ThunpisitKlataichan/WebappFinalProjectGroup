@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/header.tsx'
 import Footer from './components/footer.tsx'
+import Body from './components/body.tsx'
 
 function App() {
 
   return (
     <>
       <Header/>
+      <Body/>
       <Footer/>
     </>
   )
