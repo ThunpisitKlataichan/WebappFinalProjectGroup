@@ -1,6 +1,8 @@
+import Header from "../header";
 function LoginPage(){
     return(
         <>
+        <Header/>
         <main className="max-w-6xl mx-auto px-4">
       <section className="py-12 sm:py-16">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8"> เข้าสู่ระบบ  </h1>

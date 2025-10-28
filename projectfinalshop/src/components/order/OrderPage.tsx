@@ -2,9 +2,13 @@ import CartList from "./CartList";
 import OrderSummary from "./OrderSummary";
 import ShippingPayment from "./ShippingPayment";
 import CustomerForm from "./CustomerForm";
+import Header from "../header";
 
 function OrderPage() {
+  
   return (
+    <>
+    <Header/>
     <section className="max-w-6xl mx-auto px-4 md:px-8 py-10">
       <div className="border-b pb-4 mb-6">
         <h1 className="text-2xl md:text-3xl font-semibold">สั่งซื้อสินค้า (Order)</h1>
@@ -22,7 +26,7 @@ function OrderPage() {
       </div>
 
       <CustomerForm />
-    </section>
+    </section></>
   );
 }
 
