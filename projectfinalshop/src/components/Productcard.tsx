@@ -6,7 +6,7 @@ type Props = {
   specs: string[];
 };
 
-export default function ProductCard({ img, brand, model, price, specs }: Props) {
+function ProductCard({ img, brand, model, price, specs }: Props) {
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
       {/* รูปสินค้า */}
@@ -42,3 +42,4 @@ export default function ProductCard({ img, brand, model, price, specs }: Props) 
     </div>
   );
 }
+export default ProductCard
