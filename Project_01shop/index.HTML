@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth scroll-pt-16">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music2hand — หน้าแรก</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-900 ">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 h-[var(--nav-h)] bg-white/80 backdrop-blur border-b">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
+      <!--bar ฝั่งซ้าย-->
+      <ul class="flex items-center space-x-6">
+        <li><a href="index.html"
+            class="hover:text-black relative font-semibold text-black after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-black">Home</a>
+        </li>
+        <li><a href="#contact" class="hover:text-black text-gray-600">Contact</a></li>
+        <li><a href="#products" class="hover:text-black text-gray-600">Shop</a></li>
+      </ul>
+
+      <!--bar ฝั่งขวา-->
+      <div class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-2xl border  shadow-sm">
+        <a href="#top" class="px-4 py-1 ">Music2hand</a>
+      </div>
+      <ul class="flex items-center space-x-6">
+        <li><a href="#brand" class="hover:text-black text-gray-600">Brand</a></li>
+        <li><a href="order.html" class="hover:text-black text-gray-600">Order</a></li>
+        <li><a href="login.html" class="hover:text-black text-gray-600 ">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <section class="relative w-full overflow-hidden slider flex flex-col rounded-2xl shadow-md ">
+      <div class="relative w-full pt-[56.25%]">
+        <!-- แทร็คกว้าง 400% -->
+        <div class="slider-track absolute inset-0 flex w-[400%] h-full animate-[Pic4_20s_linear_infinite]">
+          <img src="./image/Blackstar/Blackstar_big4.1.jpg" alt=""
+            class="w-1/4 h-full flex-none object-contain bg-black object-cover" />
+          <img src="./image/Fender/fender_Big1.webp" alt=""
+            class="w-1/4 h-full flex-none object-contain bg-black object-cover" />
+          <img src="./image/Sonicake/Sonicake_big3.1.jpg" alt=""
+            class="w-1/4 h-full flex-none object-contain bg-black object-cover" />
+          <img src="./image/Yamaha/Yamaha_big2.1.jpg" alt=""
+            class="w-1/4 h-full flex-none object-contain bg-black object-cover" />
+        </div>
+
+        <!--ข้อความอยู่ที่เดิมไม่เลื่อน-->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <h1 class="text-white text-3xl sm:text-5xl font-bold drop-shadow ">Music 2 hand</h1>
+          <p class="text-white/90 mt-2 max-w-xl text-sm sm:text-base ">
+            ถ้าคุณต้องการหาสินค้ากีตาร์ มือ2 ในราคาที่คุ้มค่าและคุณภาพที่ดีเยี่ยม
+            ของแท้แน่นอน ร้าน music2hand คุณจะพบสินค้ามากมาย
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Recommended Products -->
+    <section class="px-5 ">
+      <h2 class="font-semibold text-lg mb-3 mt-10">Recommended products :</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
+        <!-- การ์ดแนะนำ 1-->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-auto h-36 bg-white grid place-items-center">
+            <img src="./image/Fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png" alt="Fender Product"
+              class="w-auto h-auto object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Fender <br>
+              <span class="font-semibold">Model :</span> American Professional II Stratocaster
+            </p>
+            <p class="font-extrabold mt-2">$1299</p>
+            <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+              Pickups: 3x V-Mod II Single-Coil Strat® <br>
+              Controls: Master Volume, 2 Tone, 5-Way Switch</p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#" class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+              ดูรายละเอียด </a>
+          </div>
+        </article>
+
+        <!-- การ์ดแนะนำ 2-->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-full h-36 bg-white grid place-items-center">
+            <img src="./image/Fender/FD-AM-PRO-II-TELE-MMB-MN-01.png" alt="Fender Product"
+              class="w-auto h-auto object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Fender <br>
+              <span class="font-semibold">Model :</span> American Professional II Telecaster
+            </p>
+            <p class="font-extrabold mt-2">$1299</p>
+            <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+              Pickups: 2x V-Mod II Single-Coil Tele® <br>
+              Controls: Master Volume, Master Tone, 3-Way Switch
+            </p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#" class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+              ดูรายละเอียด </a>
+          </div>
+        </article>
+        <!--สินค้าแนะนำ 3-->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-full h-40 bg-white grid place-items-center">
+            <img src="./image/Blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg" alt="Blackstar Product"
+              class="w-auto h-40 object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Blackstar <br>
+              <span class="font-semibold">Model :</span> HT-Club 40 MKll 6L6
+            </p>
+            <p class="font-extrabold mt-2">$1299</p>
+            <p class="text-xs text-gray-600 mt-1"> Innovative 40 Watt valve combo <br>
+             2 x ECC83 and 2 x 6L6 valves <br>
+             High gain overdrive channel <br>
+             Digital Reverb with Dark/Light switch <br>
+             1×12″ Celestion Seventy-80 speaker
+            </p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#" class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+              ดูรายละเอียด </a>
+          </div>
+        </article>
+
+        <!--สินค้าแนะนำ 4-->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-full h-45 bg-white grid place-items-center">
+            <img src="./image/Sonicake/QME-50.jpg" alt="Sonicake Product" class="w-auto h-auto object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Sonicake <br>
+              <span class="font-semibold">Model :</span> Matribox
+            </p>
+            <p class="font-extrabold mt-2">$199</p>
+            <p class="text-xs text-gray-600 mt-1">- 24-bit 44.1kHz signal processing <br>
+              - Over 130 high quality effects <br>
+              - 40 legendary guitar/bass/acoustic amp types <br>
+              - 50+ dynamic/drive/EQ/mod/delay/reverb effects <br>
+              - USB audio interface function with stereo audio streaming
+            </p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#" class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+              ดูรายละเอียด </a>
+          </div>
+        </article>
+        <!--สินค้าแนะนำ 5 -->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-auto h-auto bg-white grid place-items-center">
+            <img src="./image/Yamaha/f310.jpg" alt="Yamaha Product" class="w-auto h-auto object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Yamaha <br>
+              <span class="font-semibold">Model :</span> F310
+            </p>
+            <p class="font-extrabold mt-2">$199</p>
+            <p class="text-xs text-gray-600 mt-1">Body: Spruce top, Meranti back and sides <br>
+              Neck: Nato <br>
+              Fingerboard: Rosewood <br>
+              bridge: Rosewood <br>
+              Body Shape: Traditional Western <br>
+              Body depth: 96-116mm (3.78-4.57 inches) <br>
+              Scale Length: 636mm (25.04) <br>
+              Tuning machines: Open chrome
+            </p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#" class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">
+              ดูรายละเอียด </a>
+          </div>
+        </article>
+
+        <!--สินค้าแนะนำ 6-->
+        <article class="w-[260px] border rounded-lg shadow-sm overflow-hidden bg-white flex flex-col items-center space-y-4 
+          hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+          <div class="w-full h-40 bg-white grid place-items-center">
+            <img src="./image/Yamaha/PSR-E283.jpg" alt="Yamaha Product" class="w-auto h-40 object-cover">
+          </div>
+          <div class="p-3">
+            <p class="text-xs leading-4">
+              <span class="font-semibold">Brand :</span> Yamaha <br>
+              <span class="font-semibold">Model :</span> PSR-E283
+            </p>
+            <p class="font-extrabold mt-2">$399</p>
+            <p class="text-xs text-gray-600 mt-1">- 410 high-quality Voices, 150 auto accompaniment Styles <br>
+              - 122 Songs, easy Song Book <br>
+              - Smart Chord <br>
+              - Stereo Speakers (12cm x 2 / 2.5W x 2) <br>
+              - Battery operation (AAx6)
+            </p>
+          </div>
+          <div class="mt-3 flex justify-end">
+            <a href="#"
+              class="px-3 py-1 m-3 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600">ดูรายละเอียด
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="brand" class="max-w-6xl mx-auto px-4 py-10 ">
+      <h2 class="text-center text-2xl font-semibold mb-6 reveal">Brand</h2>
+
+      <!-- ปุ่มเลือกแบรนด์ -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+        <!-- Fender -->
+        <a href="#brand-fender" class="relative w-40 h-28 rounded-2xl border ">
+          <img src="./image/Fender/fender_brand02.png" alt="Fender Logo" class="w-full h-full object-cover">
+          <span class="absolute inset-0 grid place-items-center text-white font-bold bg-black/40"> FENDER</span>
+        </a>
+
+        <!-- Yamaha -->
+        <a href="#brand-yamaha" class="relative w-40 h-28 rounded-xl">
+          <img src="./image/Yamaha/yamaha_brand.jpg" alt="Yamaha Logo" class="w-full h-full object-cover">
+          <span class="absolute inset-0 grid place-items-center text-white font-bold bg-black/40"> YAMAHA </span>
+        </a>
+
+        <!-- Blackstar -->
+        <a href="#brand-blackstar" class="relative w-40 h-28 rounded-xl">
+          <img src="./image/Blackstar/Blackstar_brand.jpg" alt="Blackstar Logo" class="w-40 h-28 object-cover">
+          <span class="absolute inset-0 grid place-items-center text-white font-bold bg-black/40">BLACKSTAR </span>
+        </a>
+
+        <!-- Sonicake -->
+        <a href="#brand-sonicake" class="relative w-40 h-28 rounded-xl">
+          <img src="./image/Sonicake/Sonicake_brand.jpg" alt="Sonicake Logo" class="w-full h-full object-cover">
+          <span class="absolute inset-0 grid place-items-center text-white font-bold bg-black/40"> SONICAKE </span>
+        </a>
+      </div>
+      <hr class="mt-8 reveal" data-delay="200" />
+    </section>
+
+    <section id="products" class="max-w-7xl mx-auto px-4 md:px-8 py-8  flex flex-col rounded-2xl  ">
+      <h2 class="text-center text-xl font-semibold mb-6">Product</h2>
+      <div class="grid grid-cols-12 gap-8">
+        <!-- Sidebar (เมนูบาร์ฝั่งซ้าย) -->
+        <aside class="col-span-12 md:col-span-3 md:sticky md:top-[var(--nav-h)]">
+          <div class=" bg-gray-50 rounded-xl border p-4 md:max-h-[calc(100vh-var(--nav-h))] md:overflow-auto">
+            <h3 class="font-semibold mb-3">Brand</h3>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Yamaha ✕</span>
+              <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Blackstar ✕</span>
+              <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Fender ✕</span>
+              <span class="text-xs bg-gray-200 px-2 py-1 rounded-full">Sonicake ✕</span>
+            </div>
+          <!-- ตัวเลือก เลือกได้ -->
+            <h4 class="text-sm font-medium mb-2">Category</h4>
+            <ul class="space-y-2 text-sm mb-6">
+              <li><label class="inline-flex items-center gap-2">
+                  <input type="checkbox" class="rounded"> Guitar
+                </label></li>
+              <li><label class="inline-flex items-center gap-2">
+                  <input type="checkbox" class="rounded"> Electric Guitar
+                </label></li>
+              <li><label class="inline-flex items-center gap-2">
+                  <input type="checkbox" class="rounded"> Bass guitar
+                </label></li>
+              <li><label class="inline-flex items-center gap-2">
+                  <input type="checkbox" class="rounded"> multi Effect
+                </label></li>
+            </ul>
+
+            <h4 class="text-sm font-medium mb-2">Price</h4>
+            <input type="range" min="0" max="20000" class="w-full accent-gray-800">
+            <div class="flex justify-between text-xs text-gray-500 mt-1">
+              <span>0</span><span>฿20,000</span>
+            </div>
+
+            <h4 class="text-sm font-medium mt-6 mb-2">ราคา</h4>
+            <ul class="space-y-1 text-sm">
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox"> ฿5,000–฿10,000</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox"> ฿10,000–฿15,000</label></li>
+              <li><label class="inline-flex items-center gap-2"><input type="checkbox"> ฿15,000–฿20,000</label></li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- สินค้า -->
+        <div class="col-span-12 md:col-span-9">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-auto h-36 bg-white grid place-items-center">
+                <img src="./image/Fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png" alt="Fender Product"
+                  class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Fender <br>
+                  <span class="font-semibold">Model :</span> American Professional II Stratocaster
+                </p>
+                <p class="font-extrabold mt-2">$1299</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+                  Pickups: 3x V-Mod II Single-Coil Strat® <br>
+                  Controls: Master Volume, 2 Tone, 5-Way Switch</p>
+              </div>
+
+              <!-- ปุ่มการทำงาน -->
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด
+                  </a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">
+                    สั่งซื้อ </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- การ์ดสินค้า -->
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-auto h-36 bg-white grid place-items-center ">
+                <img src="./image/Fender/FD-AM-PRO-II-TELE-MMB-MN-01.png" alt="Fender Product"
+                  class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Fender <br>
+                  <span class="font-semibold">Model :</span> American Professional II Telecaster
+                </p>
+                <p class="font-extrabold mt-2">$1299</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+                  Pickups: 2x V-Mod II Single-Coil Tele® <br>
+                  Controls: Master Volume, Master Tone, 3-Way Switch</p>
+              </div>
+
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- การ์ดสินค้า -->
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Fender/jazz-bass-fretless-american-professional-ii-usa-rw-hd-2-172149.webp"
+                  alt="Product" class="w-45 h-40 object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Fender <br>
+                  <span class="font-semibold">Model :</span> American Professional II Jazz Bass
+                </p>
+                <p class="font-extrabold mt-2">$1299</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+                  Pickups: 2x V-Mod II Single-Coil Jazz Bass <br>
+                  Controls: Master Volume, Master Tone
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Fender/precision-bass-american-professional-ii-usa-rw-hd-171804.webp" alt="Product"
+                  class="w-45 h-40 object-cover ">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Fender <br>
+                  <span class="font-semibold">Model :</span> American Professional II Precision Bass
+                </p>
+                <p class="font-extrabold mt-2">$1299</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+                  Pickups: V-Mod II Split Single-Coil Precision Bass <br>
+                  Controls: Master Volume, Master Tone
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg" alt="Blackstar Product"
+                  class="w-auto h-40 object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Blackstar <br>
+                  <span class="font-semibold">Model :</span> HT-Club 40 MKll 6L6
+                </p>
+                <p class="font-extrabold mt-2">$1099</p>
+                <p class="text-xs text-gray-600 mt-1">- Innovative 40 Watt valve combo <br>
+                  - 2 x ECC83 and 2 x 6L6 valves <br>
+                  - High gain overdrive channel <br>
+                  - Digital Reverb with Dark/Light switch <br>
+                  - 1×12″ Celestion Seventy-80 speaker
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Blackstar/BS-DB-50R-COXB-03.jpg" alt="Blackstar Product"
+                  class="w-auto h-40 object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Blackstar <br>
+                  <span class="font-semibold">Model :</span> Debut 50R
+                </p>
+                <p class="font-extrabold mt-2">$399</p>
+                <p class="text-xs text-gray-600 mt-1">- 50 Watt combo <br>
+                  - 2 Channels - Clean + Overdrive <br>
+                  - 1×12″ custom-designed speaker, producing true Blackstar tones <br>
+                  - ‘Plate’ and ‘Hall’ reverb options <br>
+                  - 50W - 5W power reduction
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Sonicake/QME-50.jpg" alt="Sonicake Product" class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Sonicake <br>
+                  <span class="font-semibold">Model :</span> Matribox
+                </p>
+                <p class="font-extrabold mt-2">$199</p>
+                <p class="text-xs text-gray-600 mt-1">- 24-bit 44.1kHz signal processing <br>
+                  - Over 130 high quality effects <br>
+                  - 40 legendary guitar/bass/acoustic amp types <br>
+                  - 50+ dynamic/drive/EQ/mod/delay/reverb effects <br>
+                  - USB audio interface function with stereo audio streaming
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-36 bg-white grid place-items-center">
+                <img src="./image/Sonicake/Sonicake Levitate.jpg" alt="Sonicake Product" class="w-46 h-32 object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Sonicake <br>
+                  <span class="font-semibold">Model :</span> Levitate
+                </p>
+                <p class="font-extrabold mt-2">$199</p>
+                <p class="text-xs text-gray-600 mt-1">- 24-bit 44.1kHz signal processing <br>
+                  - Over 130 high quality effects <br>
+                  - 40 legendary guitar/bass/acoustic amp types <br>
+                  - 50+ dynamic/drive/EQ/mod/delay/reverb effects <br>
+                  - USB audio interface function with stereo audio streaming
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-40 bg-white grid place-items-center">
+                <img src="./image/Sonicake/IMG_4061.jpeg" alt="Sonicake Product" class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Sonicake <br>
+                  <span class="font-semibold">Model :</span> Matribox
+                </p>
+                <p class="font-extrabold mt-2">$199</p>
+                <p class="text-xs text-gray-600 mt-1">- 24-bit 44.1kHz signal processing <br>
+                  - Over 130 high quality effects <br>
+                  - 40 legendary guitar/bass/acoustic amp types <br>
+                  - 50+ dynamic/drive/EQ/mod/delay/reverb effects <br>
+                  - USB audio interface function with stereo audio streaming
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-36 bg-white grid place-items-center">
+                <img src="./image/Yamaha/cropped-pacifica-standard-plus-pacs-12-trem-hss-rw-205958.jpeg"
+                  alt="Yamaha Product" class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Yamaha <br>
+                  <span class="font-semibold">Model :</span> Pacifica Standard Plus PACS+12
+                </p>
+                <p class="font-extrabold mt-2">$1299</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Alder <br> Neck: Maple, Maple Or Rosewood <br>
+                  Pickups: Reflectone HS7n: Single Coil and Humbuker <br>
+                  Controls: Master Volume with High-Pass Circuit, Master Tone (Push-Pull Coil Split) <br>
+                  Pickup Switch: 5-Position Lever Switch
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-auto bg-white grid place-items-center">
+                <img src="./image/Yamaha/f310.jpg" alt="Yamaha Product" class="w-auto h-auto object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Yamaha <br>
+                  <span class="font-semibold">Model :</span> F310
+                </p>
+                <p class="font-extrabold mt-2">$199</p>
+                <p class="text-xs text-gray-600 mt-1">Body: Spruce top, Meranti back and sides <br>
+                  Neck: Nato <br>
+                  Fingerboard: Rosewood <br>
+                  bridge: Rosewood <br>
+                  Body Shape: Traditional Western <br>
+                  Body depth: 96-116mm (3.78-4.57 inches) <br>
+                  Scale Length: 636mm (25.04) <br>
+                  Tuning machines: Open chrome
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="group flex flex-col border rounded-xl shadow-sm bg-white overflow-hidden flex flex-col items-center space-y-4 
+                hover:shadow-2xl transition-shadow duration-300 hover:bg-blue-100">
+              <div class="w-full h-36 bg-white place-items-center">
+                <img src="./image/Yamaha/PSR-E283.jpg" alt="Yamaha Product" class="w-auto h-33 object-cover">
+              </div>
+              <div class="p-3">
+                <p class="text-xs leading-4">
+                  <span class="font-semibold">Brand :</span> Yamaha <br>
+                  <span class="font-semibold">Model :</span> PSR-E283
+                </p>
+                <p class="font-extrabold mt-2">$399</p>
+                <p class="text-xs text-gray-600 mt-1">- 410 high-quality Voices, 150 auto accompaniment Styles <br>
+                  - 122 Songs, easy Song Book <br>
+                  - Smart Chord <br>
+                  - Stereo Speakers (12cm x 2 / 2.5W x 2) <br>
+                  - Battery operation (AAx6)
+                </p>
+              </div>
+              <div class="mt-auto p-3 pt-0 ">
+                <div class="flex items-center gap-2 justify-end">
+                  <a href="#detail"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs border rounded hover:bg-gray-50">รายละเอียด</a>
+                  <button type="button"
+                    class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded bg-gray-900 text-white hover:bg-black">สั่งซื้อ</button>
+                </div>
+              </div>
+            </article>
+          </div>
+    </section>
+
+    <footer id="contact" class="border-t mt-12  flex flex-col rounded-2xl">
+      <div class="max-w-7xl mx-auto px-4 md:px-8 py-10 ">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <!-- คอลัมน์ซ้าย (คำอธิบาย ) -->
+          <div class="md:col-span-2">
+            <h3 class="text-xl font-semibold text-center md:text-left">Music2Hand</h3>
+            <p class="mt-3 text-sm leading-6 text-gray-700 text-center md:text-left">
+              ขอบคุณลูกค้าทุกท่านที่เข้ามาเยี่ยมหรือใช้บริการจากร้าน music2hand<br>ติดตามโปรอัปเดตสินค้าใหม่ๆ คู่รุ่นฮิต
+              มือหนึ่ง–มือสอง คัดสภาพดี และอย่าพลาดโอกาสเด็ดกับโปรโมชั่นสินค้าพิเศษที่เรานำมาดูแลทุกท่านในงบของคุณ
+              ขอบคุณจาก <strong>music2hand</strong> </p>
+            <!--contact-->
+            <div class="mt-6 text-sm text-gray-800">
+              <p class="font-semibold">ติดต่อเราได้ที่</p>
+              <p>อีเมล์ : <a href="mailto:music2hand@gmail.com" class="underline">music2hand@gmail.com</a></p>
+              <p>เบอร์โทร : 098-xxx-xxxx</p>
+            </div>
+
+            <!--แอพ logo-->
+            <div class="mt-4 flex items-center gap-4 justify-center md:justify-start">
+              <!-- Facebook -->
+              <a href="#" aria-label="Facebook" class="p-2 rounded-full border hover:bg-gray-50">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                  <path
+                    d="M22 12a10 10 0 1 0-11.6 9.87v-6.99H7.9V12h2.5V9.8c0-2.46 1.47-3.82 3.72-3.82 1.08 0 2.21.19 2.21.19v2.43h-1.25c-1.23 0-1.62.76-1.62 1.55V12h2.76l-.44 2.88h-2.32v6.99A10 10 0 0 0 22 12Z" />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#" aria-label="Instagram" class="p-2 rounded-full border hover:bg-gray-50">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                  <path
+                    d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 4a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.2A2.8 2.8 0 1 0 14.8 12 2.8 2.8 0 0 0 12 8.2Zm5.1-.9a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1Z" />
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a href="#" aria-label="YouTube" class="p-2 rounded-full border hover:bg-gray-50">
+                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                  <path
+                    d="M23.5 7.1a3 3 0 0 0-2.1-2.1C19.6 4.5 12 4.5 12 4.5s-7.6 0-9.4.5A3 3 0 0 0 .5 7.1 31 31 0 0 0 0 12a31 31 0 0 0 .5 4.9 3 3 0 0 0 2.1 2.1c1.8.5 9.4.5 9.4.5s7.6 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-4.9ZM9.8 15.3V8.7l6 3.3-6 3.3Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- คอลัมน์ด้านขวา -->
+          <div class="grid grid-cols-3 gap-8 md:col-span-2">
+            <div>
+              <h4 class="font-semibold">Brand</h4>
+              <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                <li><a href="#brand" class="hover:underline">Fender</a></li>
+                <li><a href="#products" class="hover:underline">Blackstar</a></li>
+                <li><a href="#top" class="hover:underline">Sonicake</a></li>
+                <li><a href="#contact" class="hover:underline">Yamaha</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">Catagory</h4>
+              <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                <li><a href="#brand" class="hover:underline">Guitar</a></li>
+                <li><a href="#products" class="hover:underline">Electric guitar</a></li>
+                <li><a href="#top" class="hover:underline">Bass guitar</a></li>
+                <li><a href="#contact" class="hover:underline">multi Effect</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold">About Us</h4>
+              <ul class="mt-3 space-y-2 text-sm text-gray-700">
+                <li><a href="" class="hover:underline">ทางมาร้าน Map</a></li>
+                <li><a href="" class="hover:underline">Open daily : 11.00-20.00</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t text-center text-xs text-gray-500">
+          © 2025 Music2Hand — All rights reserved.
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
