@@ -1,12 +1,12 @@
 import Slideimage from "./Slideimages.tsx";
-import ProductCard from './Productcard.tsx';
+import ProductCard from './Products/Productcard.tsx';
 import FenderProduct1 from './images/fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png';
 import FenderProduct2 from './images/fender/FD-AM-PRO-II-TELE-MMB-MN-01.png'
 import BlackstarProdust1 from './images/blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg'
 import SonicakeProdust1 from './images/sonicake/QME-50.jpg'
 import YamahaProdust1 from './images/yamaha/f310.jpg'
 import YamahaProdust2 from './images/yamaha/PSR-E283.jpg'
-import ProductPage from "./ProductPage.tsx"
+import ProductPage from "./Products/ProductPage.tsx"
 
 
 function Body (){
