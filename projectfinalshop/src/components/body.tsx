@@ -1,8 +1,12 @@
+// body.tsx
+
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Slideimage from "./Slideimages.tsx";
 import ShowCard from "./Products/ShowCard.tsx";
 import ProductPage from "./Products/ProductPage.tsx";
+
+
 
 interface InstrumentProps {
   _id: string;
@@ -53,10 +57,9 @@ function Body() {
       <Slideimage />
       <div className="max-w-6xl mx-auto px-4 py-8">
         <h2 className="text-xl font-semibold mb-4">Recommended products :</h2>
-        {/* 💡 ใช้ข้อมูลที่ถูกกรองแล้ว */}
         <ShowCard dataset={recommendedInstruments} />
       </div>
-      <ProductPage />
+      <ProductPage datasetProd={recommendedInstruments}/>
     </>
   );
 }

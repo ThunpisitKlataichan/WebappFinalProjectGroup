@@ -1,3 +1,4 @@
+// ShowCard.tsx
 import React from 'react';
 import ProductCard from './Productcard.tsx'; 
 
