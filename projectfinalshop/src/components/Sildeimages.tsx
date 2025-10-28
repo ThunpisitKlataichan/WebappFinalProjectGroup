@@ -1,12 +1,17 @@
+import FenderSlide from './images/fender/fender_Big1.webp'
+import YamahaSlide from './images/yamaha/Yamaha_big2.2.jpg'
+
+
+
 function Slideimage(){
     return<>
  <section className="relative w-full overflow-hidden slider flex flex-col rounded-2xl shadow-md ">
       <div className="relative w-full pt-[56.25%]">
         
         <div className="slider-track absolute inset-0 flex w-[400%] h-full animate-[Pic4_20s_linear_infinite]">
-          <img src="./image/Blackstar/Blackstar_big4.1.jpg" alt=""
+          <img src={FenderSlide} alt="Fender Product"
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
-          <img src="./image/Fender/fender_Big1.webp" alt=""
+          <img src={YamahaSlide} alt="Yamaha Product"
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
           <img src="./image/Sonicake/Sonicake_big3.1.jpg" alt=""
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
