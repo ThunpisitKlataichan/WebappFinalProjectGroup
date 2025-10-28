@@ -1,5 +1,8 @@
 import FenderSlide from './images/fender/fender_Big1.webp'
 import YamahaSlide from './images/yamaha/Yamaha_big2.2.jpg'
+import SonicakeSlide from './images/sonicake/Sonicake_big3.1.jpg'
+import BlackstarSlide from './images/blackstar/Blackstar_big4.1.jpg'
+
 
 
 
@@ -13,9 +16,9 @@ function Slideimage(){
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
           <img src={YamahaSlide} alt="Yamaha Product"
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
-          <img src="./image/Sonicake/Sonicake_big3.1.jpg" alt=""
+          <img src={SonicakeSlide} alt=""
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
-          <img src="./image/Yamaha/Yamaha_big2.1.jpg" alt=""
+          <img src={BlackstarSlide} alt=""
             className="w-1/4 h-full flex-none object-contain bg-black object-cover" />
         </div>
 
