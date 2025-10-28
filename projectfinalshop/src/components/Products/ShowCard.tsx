@@ -1,20 +1,8 @@
 // ShowCard.tsx
 import React from 'react';
 import ProductCard from './Productcard.tsx'; 
+import type {ShowCardProps} from '../types/InstrumentTypes';
 
-interface InstrumentProps {
-    _id: string; // MongoDB ID (ใช้เป็น key ได้)
-    imageUrl: string; // เปลี่ยน img เป็น imageUrl ให้ตรงกับ Schema
-    brand: string;
-    model: string;
-    price: number; // 💡 ต้องเป็น number เพราะมาจาก DB
-    description: string;
-    showBuy?: boolean;
-}
-
-interface ShowCardProps{
-    dataset: InstrumentProps[];
-}
 
 const ShowCard: React.FC<ShowCardProps> = ({ dataset }) => {
     

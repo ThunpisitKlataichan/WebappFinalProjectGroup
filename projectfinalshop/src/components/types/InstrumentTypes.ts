@@ -1,3 +1,4 @@
+// InstrumentTypes.ts
 export interface InstrumentProps {
     _id: string;
     imageUrl: string; 
