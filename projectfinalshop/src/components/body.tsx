@@ -8,6 +8,7 @@ import YamahaProdust1 from './images/yamaha/f310.jpg'
 import YamahaProdust2 from './images/yamaha/PSR-E283.jpg'
 import ProductPage from "./ProductPage.tsx"
 
+
 function Body (){
     return(
         <>

@@ -10,7 +10,7 @@ import YamahaProdust2 from './images/yamaha/PSR-E283.jpg'
 function ProductPage (){
     return(
         <>
-       <section className="max-w-7xl mx-auto px-4 md:px-8 py-10">
+       <section  id="Product" className="max-w-7xl mx-auto px-4 md:px-8 py-10">
       <h2 className="text-2xl font-semibold text-center mb-8">Product</h2>
 
   <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 items-start">
