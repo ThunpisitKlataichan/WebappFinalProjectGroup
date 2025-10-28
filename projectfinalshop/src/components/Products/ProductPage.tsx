@@ -30,7 +30,7 @@ function ProductPage (){
               brand="Fender"
               model="American Professional II Stratocaster"
               price="฿60,000"
-              specs={[
+              description={[
                 "Body: Alder",
                 "Neck: Maple / Rosewood",
                 "Pickups: 3x V-Mod II Single-Coil Strat®",
@@ -44,7 +44,7 @@ function ProductPage (){
               brand="Fender"
               model="American Professional II Telecaster"
               price="฿60,000"
-              specs={[
+              description={[
                 "Body: Alder",
                 "Neck: Maple",
                 "Pickups: 2x V-Mod II Single-Coil Tele®",
@@ -58,7 +58,7 @@ function ProductPage (){
               brand="Blackstar"
               model="HT-Club 40 MKII 6L6"
               price="฿20,000"
-              specs={[
+              description={[
                 "Innovative 40 Watt valve combo",
                 "2 x ECC83 and 2 x 6L6 valves",
                 "High gain overdrive channel",
@@ -72,7 +72,7 @@ function ProductPage (){
               brand="Sonicake"
               model="QME-50"
               price="฿3,000"
-              specs={[
+              description={[
                 "24-bit 44.1kHz signal processing",
                 "Over 130 quality effects",
                 "40 amp types / 50 reverb presets",
@@ -85,7 +85,7 @@ function ProductPage (){
               brand="Yamaha"
               model="F310"
               price="฿4,000"
-              specs={[
+              description={[
                 "Body: Spruce top, Nato back",
                 "Fingerboard: Rosewood",
                 'Scale Length: 636mm (25")',
@@ -98,7 +98,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -109,7 +109,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -120,7 +120,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -131,7 +131,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -142,7 +142,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -153,7 +153,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',
@@ -164,7 +164,7 @@ function ProductPage (){
               brand="Yamaha"
               model="PSR-E283"
               price="฿4,000"
-              specs={[
+              description={[
                 "410 high-quality Voices, 150 Styles",
                 "122 Songs, Smart Chord",
                 'Stereo Speakers (12cm x 2)',

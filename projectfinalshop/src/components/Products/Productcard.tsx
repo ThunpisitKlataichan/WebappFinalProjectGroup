@@ -3,7 +3,7 @@ type ProductCardProps = {
   brand: string;
   model: string;
   price: string;
-  specs: string[];
+  description: string[];
   showBuy?: boolean; // ✅ เพิ่มตรงนี้ (optional)
 };
 
@@ -12,7 +12,7 @@ export default function ProductCard({
   brand,
   model,
   price,
-  specs,
+  description,
   showBuy = false, // ✅ destructure พร้อม default value
 }: ProductCardProps) {
   return (
@@ -30,7 +30,7 @@ export default function ProductCard({
         <p className="font-extrabold text-lg mt-2">{price}</p>
 
         <ul className="text-xs text-gray-600 mt-2 space-y-1">
-          {specs.map((s, i) => (
+          {description.map((s, i) => (
             <li key={i}>{s}</li>
           ))}
         </ul>
