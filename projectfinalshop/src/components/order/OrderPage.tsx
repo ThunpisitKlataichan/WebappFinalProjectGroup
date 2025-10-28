@@ -2,7 +2,7 @@ import CartList from "./CartList";
 import OrderSummary from "./OrderSummary";
 import ShippingPayment from "./ShippingPayment";
 import CustomerForm from "./CustomerForm";
-import Header from "../header";
+import Header from "../Header";
 
 function OrderPage() {
   

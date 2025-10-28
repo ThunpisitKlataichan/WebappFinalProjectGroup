@@ -1,5 +1,5 @@
-import Slideimage from "./sildeimages.tsx";
-import ProductCard from './productcard.tsx';
+import Slideimage from "./Slideimages.tsx";
+import ProductCard from './Productcard.tsx';
 import FenderProduct1 from './images/fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png';
 import FenderProduct2 from './images/fender/FD-AM-PRO-II-TELE-MMB-MN-01.png'
 import BlackstarProdust1 from './images/blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg'
