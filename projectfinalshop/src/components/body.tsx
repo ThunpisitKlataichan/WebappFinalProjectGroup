@@ -5,7 +5,7 @@ import axios from "axios";
 import Slideimage from "./Slideimages.tsx";
 import ShowCard from "./Products/ShowCard.tsx";
 import ProductPage from "./Products/ProductPage.tsx";
-import type {InstrumentProps,} from "./types/InstrumentTypes";
+import type { InstrumentProps } from "./types/InstrumentTypes";
 
 function Body() {
   const [instruments, setInstruments] = useState<InstrumentProps[]>([]);
@@ -29,7 +29,11 @@ function Body() {
     fetchInstruments();
   }, []);
 
-  const recommendedInstruments = instruments;
+  const recommendedInstruments = instruments.filter(
+    (item) => item.isShown === true
+  );
+  
+  const allInstruments = instruments;
 
   if (loading) {
     return (
@@ -44,7 +48,7 @@ function Body() {
         <h2 className="text-xl font-semibold mb-4">Recommended products :</h2>
         <ShowCard dataset={recommendedInstruments} />
       </div>
-      <ProductPage datasetProd={recommendedInstruments} />
+      <ProductPage datasetProd={allInstruments} />
     </>
   );
 }
