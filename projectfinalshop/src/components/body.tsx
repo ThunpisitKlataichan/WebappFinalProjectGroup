@@ -1,12 +1,12 @@
-import Slideimage from "./Sildeimages";
-import Productcard from './Productcard.tsx';
+import Slideimage from "./sildeimages.tsx";
+import ProductCard from './productcard.tsx';
 import FenderProduct1 from './images/fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png';
 import FenderProduct2 from './images/fender/FD-AM-PRO-II-TELE-MMB-MN-01.png'
 import BlackstarProdust1 from './images/blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg'
 import SonicakeProdust1 from './images/sonicake/QME-50.jpg'
 import YamahaProdust1 from './images/yamaha/f310.jpg'
 import YamahaProdust2 from './images/yamaha/PSR-E283.jpg'
-
+import ProductPage from "./ProductPage.tsx"
 
 function Body (){
     return(
@@ -16,8 +16,9 @@ function Body (){
         <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-xl font-semibold mb-4">Recommended products :</h2>
 
+
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <Productcard img={FenderProduct1} 
+        <ProductCard img={FenderProduct1} 
           brand="Fender"
           model="American Professional II Stratocaster"
           price="฿60,000"
@@ -29,7 +30,7 @@ function Body (){
           ]}
         />
           
-            <Productcard img={FenderProduct2} 
+            <ProductCard img={FenderProduct2} 
              brand="Fender"
              model="American Professional II Telecaster"
              price="฿60,000"
@@ -41,7 +42,7 @@ function Body (){
           ]}
         />
           
-        <Productcard img={BlackstarProdust1} 
+        <ProductCard img={BlackstarProdust1} 
           brand="Blackstar"
           model="HT-Club 40 MKll 6L6"
           price="฿20,000"
@@ -54,7 +55,7 @@ function Body (){
           ]}
         />
 
-         <Productcard img={SonicakeProdust1} 
+         <ProductCard img={SonicakeProdust1} 
           brand="Sonicake"
           model="Matribox"
           price="฿3,000"
@@ -67,7 +68,7 @@ function Body (){
           ]}
         />
 
-         <Productcard img={YamahaProdust1} 
+         <ProductCard img={YamahaProdust1} 
           brand="Yamamha"
           model="F310"
           price="฿4,000"
@@ -83,7 +84,7 @@ function Body (){
           ]}
         />
 
-         <Productcard img={YamahaProdust2} 
+         <ProductCard img={YamahaProdust2} 
           brand="Yamaha"
           model="PSR-E283"
           price="฿4,000"
@@ -95,12 +96,13 @@ function Body (){
             "- Battery operation (AAx6)",
           ]}
         />
-
-
           </div>
         </div>
+        
+       <ProductPage/>
+
      </>
-    )
+     )
 }
 
 export default Body

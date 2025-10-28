@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function Header (){
     return (
         <>
@@ -17,8 +20,8 @@ function Header (){
       </div>
       <ul className="flex items-center space-x-6">
         <li><a href="#brand" className="hover:text-black text-gray-600">Brand</a></li>
-        <li><a href="order.html" className="hover:text-black text-gray-600">Order</a></li>
-        <li><a href="login.html" className="hover:text-black text-gray-600 ">Login</a></li>
+        <li><a href="/order" className="hover:text-black text-gray-600">Order</a></li>
+        <li><a href="/login" className="hover:text-black text-gray-600 ">Login</a></li>
       </ul>
     </nav>
   </header>
