@@ -1,5 +1,5 @@
-import Slideimage from "./sildeimages.tsx";
-import ProductCard from './productcard.tsx';
+import Slideimage from "./Sildeimages.tsx";
+import ProductCard from './Productcard.tsx';
 import FenderProduct1 from './images/fender/FD-AM-PRO-II-STRAT-MSG-RW-01.png';
 import FenderProduct2 from './images/fender/FD-AM-PRO-II-TELE-MMB-MN-01.png'
 import BlackstarProdust1 from './images/blackstar/BA202002-H-HT-CLUB-40-MK-III-FRONT__60707.jpg'
@@ -15,7 +15,6 @@ function Body (){
 
         <div className="max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-xl font-semibold mb-4">Recommended products :</h2>
-
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <ProductCard img={FenderProduct1} 
