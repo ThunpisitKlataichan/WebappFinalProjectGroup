@@ -6,7 +6,7 @@ import APIUrl from "../types/APIUrl";
 interface AddProductModalProps {
   open: boolean;
   onClose: () => void;
-  onConfirm: (data: any, file: File | null) => void;
+  onConfirm: (data: any, fileUrl: string | null) => void;
 }
 
 export default function AddProductModal({ open, onClose, onConfirm }: AddProductModalProps) {
@@ -20,11 +20,12 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
     imageUrl: "",
     isShow: true,
   });
-  const [file, setFile] = useState<File | null>(null);
+  const [file, setFile] = useState<string | null>(null);
+
 
   useEffect(() => {
     if (!open) {
-      setForm({ model: "", brand: "",type: "",price: "", stock: "", description: "" , imageUrl: "", isShow:true,});
+      setForm({ model: "", brand: "", type: "", price: "", stock: "", description: "", imageUrl: "", isShow: true, });
       setFile(null);
     }
   }, [open]);
@@ -36,7 +37,7 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
     onConfirm(form, file);
     console.log(form)
     console.log(file)
-    
+
     onClose();
   };
 
@@ -71,7 +72,7 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
                 className="w-full px-3 py-2 rounded-xl border"
               />
             </div>
-<div>
+            <div>
               <label className="block text-sm mb-1">หมวดหมู่</label>
               <input
                 value={form.type}
@@ -79,7 +80,7 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
                 className="w-full px-3 py-2 rounded-xl border"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm mb-1">ราคา (บาท)</label>
               <input
@@ -109,35 +110,39 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
                 className="w-full px-3 py-2 rounded-xl border"
               />
             </div>
-            <div className="sm:col-span-2">
-              <label className="block text-sm mb-1">แนบไฟล์ (รูป/เอกสาร)</label>
-              <input
-                id="fileAdd"
-                type="file"
-                className="hidden"
-                onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-              />
-              <label
-                htmlFor="fileAdd"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-xl border cursor-pointer hover:bg-gray-50"
-              >
-                📎 แนบไฟล์
-              </label>
-              {file && (
-                <div className="mt-2 text-sm text-gray-600">
-                  เลือกไฟล์: <span className="font-medium">{file.name}</span>
-                </div>
-              )}
-            </div>
-          </div>
 
-          <div className="pt-2 flex justify-end gap-2">
-            <button type="button" onClick={onClose} className="px-3 py-1.5 rounded-xl border">
-              ยกเลิก
-            </button>
-            <button type="submit" className="px-3 py-1.5 rounded-xl bg-black text-white hover:bg-gray-800">
-              ตกลง
-            </button>
+            <div className="sm:col-span-2">
+              <label className="block text-sm mb-1">แนบลิงก์รูปภาพ</label>
+              <input
+                type="url"
+                placeholder="วางลิงก์รูปภาพ (เช่น Copy image address จาก Google)"
+                className="w-full px-3 py-2 rounded-xl border"
+                value={file ?? ""}
+                onChange={(e) => setFile(e.target.value || null)}
+              />
+
+              {/* ถ้ามีลิงก์แล้วให้แสดงรูปตัวอย่าง */}
+              {file && (
+                <div className="mt-3">
+                  <div className="mt-3">
+                    <img  src={file} alt="Preview"
+                      className="max-h-60 rounded-lg border shadow-sm object-contain mx-auto"
+                        onError={(e) => {   e.currentTarget.style.display = "none"; 
+                      }}
+                    />
+                  </div>
+                </div>
+              )}    
+            </div>
+
+            <div className="pt-2 flex justify-end gap-2">
+              <button type="button" onClick={onClose} className="px-3 py-1.5 rounded-xl border">
+                ยกเลิก
+              </button>
+              <button type="submit" className="px-3 py-1.5 rounded-xl bg-black text-white hover:bg-gray-800">
+                ตกลง
+              </button>
+            </div>
           </div>
         </form>
       </div>

@@ -128,8 +128,6 @@ function HomeSalesPage() {
     console.log("เพิ่มสินค้าใหม่:", form, file);
     setStatusMessage("กำลังเพิ่มสินค้า...");
 
-    // (ในอนาคต: จัดการอัปโหลด 'file' ไปยัง Storage ที่นี่ก่อน)
-
     try {
       // แปลงค่า price/stock จาก string เป็น number ก่อนส่ง
       const dataToSend = {
