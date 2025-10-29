@@ -1,3 +1,6 @@
+import { useState } from "react";
+import type { Product } from "../types";
+
 function AddProductModal({
   open,
   onClose,

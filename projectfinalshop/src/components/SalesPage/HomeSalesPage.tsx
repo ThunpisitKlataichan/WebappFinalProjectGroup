@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 import TH from "./SalesTH";
 import ProductRow from "./ProductRow";
 import AddProductModal from "./AddProductModal";
+import { Link } from "react-router-dom";
 
 type Product = {
   id: string;
@@ -62,16 +63,35 @@ export default function HomeSalesPage() {
 
   return (
     <main className="min-h-screen bg-gray-50 py-6">
-      {/* Header */}
-      <div className="max-w-6xl mx-auto px-4 flex justify-between items-center mb-4">
-        <h1 className="text-2xl font-bold">🏷️ Home Sales Page</h1>
-        <button
-          onClick={handleAdd}
-          className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800"
-        >
-          + เพิ่มสินค้า
-        </button>
-      </div>
+  {/* Header */}
+  <div className="max-w-6xl mx-auto px-4 flex justify-between items-center mb-4">
+    <h1 className="text-2xl font-bold flex items-center gap-2">
+      🏷️ Home Sales Page
+    </h1>
+
+    <div className="flex items-center gap-3">
+      {/* ปุ่มไปหน้า Stock */}
+      <Link  to="/stock" className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"  >
+        📦 Stock
+      </Link>
+
+      {/* ปุ่มไปหน้า Login */}
+      <Link
+        to="/login"
+        className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+      >
+        🔐 Login
+      </Link>
+
+      {/* ปุ่มเพิ่มสินค้า (หลัก) */}
+      <button
+        onClick={handleAdd}
+        className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition"
+      >
+        + เพิ่มสินค้า
+      </button>
+    </div>
+  </div>
 
       {/* Search */}
       <div className="max-w-6xl mx-auto px-4 mb-4">
