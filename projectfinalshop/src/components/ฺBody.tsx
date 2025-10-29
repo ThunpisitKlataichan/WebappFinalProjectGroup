@@ -5,7 +5,7 @@ import axios from "axios";
 import Slideimage from "./Slideimages.tsx";
 import ShowCard from "./Products/ShowCard.tsx";
 import ProductPage from "./Products/ProductPage.tsx";
-import type { InstrumentProps } from "./types/InstrumentTypes";
+import type { InstrumentProps } from "./types/InstrumentTypes.ts";
 
 function Body() {
   const [instruments, setInstruments] = useState<InstrumentProps[]>([]);
