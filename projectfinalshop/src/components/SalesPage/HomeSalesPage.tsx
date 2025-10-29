@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import type Home from "../Home";
 import API_Url from "../types/APIUrl";
 import type { InstrumentProps } from "../types/InstrumentTypes";
+import axios from "axios";
 
 function HomeSalesPage() {
   const [products, setProducts] = useState<InstrumentProps[]>([]);
@@ -16,9 +17,7 @@ function HomeSalesPage() {
     return q ? products.filter((p) => p.model.toLowerCase().includes(q)) : products;
   }, [products, query]);
 
-  // ดึงข้อมูลสินค้าเมื่อ component โหลด
-  useEffect(() => {
-    const fetchProducts = async () => {
+  const fetchProducts = async () => {
       try{
         const response = await fetch(API_Url()+"/instruments");
         const data = await response.json();
@@ -28,29 +27,56 @@ function HomeSalesPage() {
 
       }
     }
-    fetchProducts()
+    
     console.log("Products fetched")
     console.log(products)
     ;
+  // ดึงข้อมูลสินค้าเมื่อ component โหลด
+  useEffect(() => {
+    fetchProducts();
   }, []);
   // เพิ่มสินค้า
+
   const handleAdd = () => {
 
   };
 
   // ดูสินค้า
   const handleView = (p: InstrumentProps) => {
-
+    alert("Product Details:\n" + 
+      "Product Name: " + p.model + "\n" +
+      "Brand: " + p.brand + "\n" +
+      "Price: " + p.price.toLocaleString() + " บาท\n" +
+      "Stock: " + p.stock + "\n" +
+      "Description: " + p.description
+    );
   };
 
   // แก้ไข
   const handleEdit = (p: InstrumentProps) => {
+    const name = prompt("Enter new product name:", p.model) || p.model;
+    const brand = prompt("Enter new brand:", p.brand) || p.brand;
+    const priceStr = prompt("Enter new price:", p.price.toString()) || p.price.toString();
+    const stockStr = prompt("Enter new stock:", p.stock.toString()) || p.stock.toString();
+    const description = prompt("Enter new description:", p.description) || p.description;
 
+    axios.put(API_Url() + "/instruments/" + p._id, {
+      ...p,
+      model: name,
+      brand: brand,
+      price: parseFloat(priceStr),
+      stock: parseInt(stockStr),
+      description: description
+    })
+    fetch(API_Url() + "/instruments")
+    fetchProducts();
   };
   // ลบสินค้า
   const handleDelete = (p: InstrumentProps) => {
-    
-  };
+    axios.delete(API_Url() + "/instruments/" + p._id)
+    alert("ลบข้อมูลสำเร็จ")
+    fetchProducts();
+    };
 
   return (
     <main className="min-h-screen bg-gray-50 py-6">
