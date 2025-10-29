@@ -1,21 +1,22 @@
 import Header from "../Header";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import type { UserandPasswordProps } from "../types/UserandPassword";
 import axios from "axios";
 import APIUrl from "../types/APIUrl";
+import {useNavigate} from "react-router-dom";
 function LoginPage() {
   const [userData, setUserData] = useState<UserandPasswordProps[]>([]);
-
+  const navigate = useNavigate();
   const fetchUserData = async () => {
     try {
-      const response = await axios.get<UserandPasswordProps[]>(APIUrl() + "/users");
+      const response = await axios.get<UserandPasswordProps[]>(
+        APIUrl() + "/users"
+      );
       setUserData(response.data);
-    }
-    catch (error) {
+    } catch (error) {
       console.error("Error fetching user data:", error);
       setUserData([]);
-    }
-    finally{
+    } finally {
       console.log("Fetched user data:", userData);
     }
   };
@@ -27,14 +28,28 @@ function LoginPage() {
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
 
-    const user = userData.find((user) => (user.email === email || user.username === email) && user.password === password);
+   
+
+    const user = userData.find(
+      (user) =>
+        (user.email === email || user.username === email) &&
+        user.password === password
+    );
     if (user) {
       alert("Login successful!");
+      switch (user.position) {
+        case "customer":
+          navigate("/"); // ไปที่หน้าลูกค้า
+          break;
+        case "sale":
+          navigate("/salepage"); // ไปที่หน้าพนักงานขาย
+          break;
+      }
     } else {
       alert("Invalid email or password.");
     }
   };
-  
+
   return (
     <>
       <Header />
