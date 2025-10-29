@@ -10,7 +10,6 @@ export interface InstrumentProps {
     stock: number; 
     description: string;
     isShown: boolean;
-    showBuy?: boolean; 
 }
 
 export interface ShowCardProps {

@@ -16,9 +16,7 @@ function LoginPage() {
     let allUsers: UserandPasswordProps[] = [];
 
     try {
-      const response = await axios.get<UserandPasswordProps[]>(
-        APIUrl() + "/users"
-      );
+      const response = await axios.get<UserandPasswordProps[]>(APIUrl() + "/users");
       allUsers = response.data;
       console.log("Fetched user data:", allUsers);
 
