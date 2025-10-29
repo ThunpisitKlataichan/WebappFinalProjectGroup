@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 import API_Url from "../types/APIUrl";
 import type { InstrumentProps } from "../types/InstrumentTypes";
 import axios from "axios";
+import AddProductModal from "./AddProductModal";
 
 function HomeSalesPage() {
   const [products, setProducts] = useState<InstrumentProps[]>([]);
+  const [openModal, setOpenModal] = useState(false);
 
   const [query, setQuery] = useState("");
 
@@ -33,8 +35,9 @@ function HomeSalesPage() {
   }, []);
   // เพิ่มสินค้า
 
-  const handleAdd = () => {
-   
+  const handleAdd = () => setOpenModal(true);
+  const handleConfirm = (form: any, file: File | null) => {
+    console.log("เพิ่มสินค้าใหม่:", form, file);
   };
   
   // ดูสินค้า
@@ -103,6 +106,11 @@ function HomeSalesPage() {
       >
         + เพิ่มสินค้า
       </button>
+       <AddProductModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        onConfirm={handleConfirm}
+      />
     </div>
   </div>
 
