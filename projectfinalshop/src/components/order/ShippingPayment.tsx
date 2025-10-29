@@ -1,40 +1,46 @@
-function ShippingPayment() {
+import type { Shipping, Payment } from "./OrderTypes";
+
+export default function ShippingPayment({
+  shipping, setShipping, payment, setPayment, errors,
+}: {
+  shipping: Shipping; setShipping: (s: Shipping) => void;
+  payment: Payment;  setPayment: (p: Payment) => void;
+  errors: { [k: string]: string };
+}) {
   return (
-    <section className="bg-white rounded-2xl shadow-sm border">
-      <div className="px-5 py-4 border-b">
-        <h3 className="font-semibold">การจัดส่ง & การชำระเงิน</h3>
-      </div>
-      <div className="p-5 space-y-5">
-        <div className="space-y-2">
-          <p className="text-sm font-medium">วิธีจัดส่ง</p>
-          <label className="flex items-center gap-3 text-sm">
-            <input type="radio" name="ship" value="standard" className="accent-black" defaultChecked />
-            <span>มาตรฐาน (2–4 วัน) — ฿500</span>
+    <section className="bg-white rounded-2xl border shadow-sm">
+      <div className="p-4 border-b font-semibold">การจัดส่ง & การชำระเงิน</div>
+      <div className="p-4 space-y-4 text-sm">
+        <div>
+          <div className="font-medium mb-2">วิธีจัดส่ง</div>
+          <label className="flex items-center gap-2">
+            <input type="radio" name="ship" checked={shipping === "standard"} onChange={() => setShipping("standard")} />
+            มาตรฐาน (2–4 วัน) — 850
           </label>
-          <label className="flex items-center gap-3 text-sm">
-            <input type="radio" name="ship" value="express" className="accent-black" />
-            <span>ด่วน (1–2 วัน) — ฿900</span>
+          <label className="flex items-center gap-2 mt-1">
+            <input type="radio" name="ship" checked={shipping === "express"} onChange={() => setShipping("express")} />
+            ด่วน (1–2 วัน) — 890
           </label>
+          {errors.shipping && <p className="text-xs text-red-600 mt-1">{errors.shipping}</p>}
         </div>
 
-        <div className="space-y-2">
-          <p className="text-sm font-medium">วิธีชำระเงิน</p>
-          <label className="flex items-center gap-3 text-sm">
-            <input type="radio" name="pay" value="transfer" className="accent-black" defaultChecked />
-            <span>โอนผ่านธนาคาร</span>
+        <div>
+          <div className="font-medium mb-2">วิธีชำระเงิน</div>
+          <label className="flex items-center gap-2">
+            <input type="radio" name="pay" checked={payment === "bank"} onChange={() => setPayment("bank")} />
+            โอนผ่านธนาคาร
           </label>
-          <label className="flex items-center gap-3 text-sm">
-            <input type="radio" name="pay" value="card" className="accent-black" />
-            <span>บัตรเครดิต/เดบิต</span>
+          <label className="flex items-center gap-2 mt-1">
+            <input type="radio" name="pay" checked={payment === "card"} onChange={() => setPayment("card")} />
+            บัตรเครดิต/เดบิต
           </label>
-          <label className="flex items-center gap-3 text-sm">
-            <input type="radio" name="pay" value="cod" className="accent-black" />
-            <span>ชำระปลายทาง (COD)</span>
+          <label className="flex items-center gap-2 mt-1">
+            <input type="radio" name="pay" checked={payment === "cod"} onChange={() => setPayment("cod")} />
+            ชำระปลายทาง (COD)
           </label>
+          {errors.payment && <p className="text-xs text-red-600 mt-1">{errors.payment}</p>}
         </div>
       </div>
     </section>
   );
 }
-
-export default ShippingPayment

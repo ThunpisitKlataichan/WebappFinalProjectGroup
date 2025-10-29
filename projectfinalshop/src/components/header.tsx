@@ -2,6 +2,7 @@ import { NavLink, Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 
 
+
 function Header () {
   return (
     <header className="sticky top-0 z-50 h-[var(--nav-h)] bg-white/80 backdrop-blur border-b">
@@ -21,9 +22,10 @@ function Header () {
         </div>
 
         <ul className="flex items-center space-x-6">
-          <li><NavLink to="/SalesPage">Admin</NavLink></li> 
+          <li><NavLink to="/OrderStatusPage">OrderStatus</NavLink></li>
           <li><NavLink to="/order">Order</NavLink></li>
           <li><NavLink to="/login">Login</NavLink></li>
+          
         </ul>
 
       </nav>
