@@ -124,7 +124,7 @@ function HomeSalesPage() {
   const handleAdd = () => setOpenModal(true);
 
   // 2. ยืนยันการเพิ่ม (⭐ แก้ไข: เพิ่ม async/await และ axios.post)
-  const handleConfirm = async (form: any, file: File | null) => {
+  const handleConfirm = async (form: any, file: string | null) => {
     console.log("เพิ่มสินค้าใหม่:", form, file);
     setStatusMessage("กำลังเพิ่มสินค้า...");
 
@@ -134,6 +134,7 @@ function HomeSalesPage() {
         ...form,
         price: parseFloat(form.price) || 0,
         stock: parseInt(form.stock, 10) || 0,
+        imageUrl : file
       };
 
       await axios.post(API_Url() + "/instruments", dataToSend);
