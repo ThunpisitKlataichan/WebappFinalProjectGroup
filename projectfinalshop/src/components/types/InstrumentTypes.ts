@@ -4,6 +4,7 @@ export interface InstrumentProps {
     imageUrl: string; 
     brand: string;
     model: string;
+    type: string;
     price: number; 
     stock: number; 
     description: string;

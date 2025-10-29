@@ -1,64 +1,55 @@
-"use client";
-import React, { useMemo, useState } from "react";
+import  { useMemo, useState , useEffect} from "react";
 import TH from "./SalesTH";
 import ProductRow from "./ProductRow";
-import AddProductModal from "./AddProductModal";
 import { Link } from "react-router-dom";
+import type Home from "../Home";
+import API_Url from "../types/APIUrl";
+import type { InstrumentProps } from "../types/InstrumentTypes";
 
-type Product = {
-  id: string;
-  name: string;
-  sku: string;
-  price: number;
-  stock: number;
-};
-
-export default function HomeSalesPage() {
-  const [products, setProducts] = useState<Product[]>([
-    { id: "1", name: "Yonex Astrox 100ZZ", sku: "YX-A100ZZ", price: 6290, stock: 12 },
-    { id: "2", name: "Victor Thruster K", sku: "VC-TK", price: 4790, stock: 8 },
-  ]);
+function HomeSalesPage() {
+  const [products, setProducts] = useState<InstrumentProps[]>([]);
 
   const [query, setQuery] = useState("");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return q ? products.filter((p) => p.name.toLowerCase().includes(q)) : products;
+    return q ? products.filter((p) => p.model.toLowerCase().includes(q)) : products;
   }, [products, query]);
 
+  // ดึงข้อมูลสินค้าเมื่อ component โหลด
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try{
+        const response = await fetch(API_Url()+"/instruments");
+        const data = await response.json();
+        setProducts(data);
+      }
+      catch(error){
+
+      }
+    }
+    fetchProducts()
+    console.log("Products fetched")
+    console.log(products)
+    ;
+  }, []);
   // เพิ่มสินค้า
   const handleAdd = () => {
-    const name = prompt("ชื่อสินค้าใหม่:");
-    const sku = prompt("รหัสสินค้า (SKU):");
-    const price = Number(prompt("ราคา:"));
-    const stock = Number(prompt("จำนวนในคลัง:"));
-    if (name && sku) {
-      setProducts((prev) => [
-        ...prev,
-        { id: Date.now().toString(), name, sku, price, stock },
-      ]);
-    }
+
   };
 
   // ดูสินค้า
-  const handleView = (p: Product) =>
-    alert(`สินค้า: ${p.name}\nราคา: ${p.price.toLocaleString()} บาท\nคงเหลือ: ${p.stock} ชิ้น`);
+  const handleView = (p: InstrumentProps) => {
 
-  // แก้ไข
-  const handleEdit = (p: Product) => {
-    const price = Number(prompt(`ราคาใหม่ของ ${p.name}:`, String(p.price)));
-    if (!isNaN(price)) {
-      setProducts((prev) =>
-        prev.map((x) => (x.id === p.id ? { ...x, price } : x))
-      );
-    }
   };
 
+  // แก้ไข
+  const handleEdit = (p: InstrumentProps) => {
+
+  };
   // ลบสินค้า
-  const handleDelete = (p: Product) => {
-    if (confirm(`แน่ใจว่าจะลบ ${p.name}?`)) {
-      setProducts((prev) => prev.filter((x) => x.id !== p.id));
-    }
+  const handleDelete = (p: InstrumentProps) => {
+    
   };
 
   return (
@@ -129,13 +120,7 @@ export default function HomeSalesPage() {
               </tr>
             ) : (
               filtered.map((p) => (
-                <ProductRow
-                  key={p.id}
-                  product={p}
-                  onView={handleView}
-                  onEdit={handleEdit}
-                  onDelete={handleDelete}
-                />
+                <ProductRow product={p} onView={handleView} onEdit={handleEdit} onDelete={handleDelete}/>
               ))
             )}
           </tbody>
@@ -144,3 +129,4 @@ export default function HomeSalesPage() {
     </main>
   );
 }
+export default HomeSalesPage;
