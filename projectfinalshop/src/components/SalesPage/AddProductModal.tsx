@@ -1,5 +1,7 @@
 // AddProductModal.tsx
+import axios from "axios";
 import React, { useState, useEffect } from "react";
+import APIUrl from "../types/APIUrl";
 
 interface AddProductModalProps {
   open: boolean;
@@ -9,17 +11,20 @@ interface AddProductModalProps {
 
 export default function AddProductModal({ open, onClose, onConfirm }: AddProductModalProps) {
   const [form, setForm] = useState({
-    name: "",
+    model: "",
     brand: "",
+    type: "",
     price: "",
     stock: "",
     description: "",
+    imageUrl: "",
+    isShow: true,
   });
   const [file, setFile] = useState<File | null>(null);
 
   useEffect(() => {
     if (!open) {
-      setForm({ name: "", brand: "", price: "", stock: "", description: "" });
+      setForm({ model: "", brand: "",type: "",price: "", stock: "", description: "" , imageUrl: "", isShow:true,});
       setFile(null);
     }
   }, [open]);
@@ -29,6 +34,12 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
     onConfirm(form, file);
+    console.log(form)
+    console.log(file)
+
+    axios.post(APIUrl()+"/instruments" , form )
+    
+
     onClose();
   };
 
@@ -49,8 +60,8 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
             <div>
               <label className="block text-sm mb-1">ชื่อสินค้า</label>
               <input
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
+                value={form.model}
+                onChange={(e) => setForm({ ...form, model: e.target.value })}
                 className="w-full px-3 py-2 rounded-xl border"
                 required
               />
