@@ -192,7 +192,7 @@ function HomeSalesPage() {
       prompt("Enter new description:", p.description) || p.description;
     const type = prompt("Enter new product category:", p.type) || p.type;
 
-    const imageUrl = prompt("Enter new product URL-Image:")||p.imageUrl;
+    const imageUrl = prompt("Enter new product URL-Image:" , p.imageUrl)||p.imageUrl;
     // (ควรถาม imageUrl และ isShown ด้วย)
 
     setStatusMessage("กำลังอัปเดต...");
