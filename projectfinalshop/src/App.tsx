@@ -6,6 +6,7 @@ import Home from './components/Home.tsx'
 import RegisterPage from './components/Auth/RegisterPage';
 import OrderStatusPage from "./components/OrderStatus/OrderStatusPage.tsx"
 import CartPage from "./components/CartPage.tsx"
+import HomeSalesPage from "./components/SalesPage/HomeSalesPage.tsx"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Register" element={<RegisterPage />} />
         <Route path="/OrderStatusPage" element={<OrderStatusPage />} />
         <Route path="/CartPage" element={<CartPage />} />
+        <Route path="/SalesPage" element={<HomeSalesPage/>} />
       </Routes>
     </>
   )
