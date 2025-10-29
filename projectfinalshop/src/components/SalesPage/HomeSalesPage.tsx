@@ -62,21 +62,20 @@ function HomeSalesPage() {
 
     <div className="flex items-center gap-3">
       {/* ปุ่มไปหน้า Stock */}
-      <Link  to="/stock" className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"  >
+      <Link  to="/stock" 
+      className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"  >
         📦 Stock
       </Link>
 
       {/* ปุ่มไปหน้า Login */}
-      <Link
-        to="/login"
+      <Link to="/login"
         className="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
       >
-        🔐 Login
+        🔐 Logout
       </Link>
 
       {/* ปุ่มเพิ่มสินค้า (หลัก) */}
-      <button
-        onClick={handleAdd}
+      <button  onClick={handleAdd}
         className="bg-black text-white px-4 py-2 rounded-lg shadow hover:bg-gray-800 transition"
       >
         + เพิ่มสินค้า
