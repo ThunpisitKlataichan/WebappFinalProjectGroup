@@ -6,17 +6,15 @@ import Slideimage from "./Slideimages.tsx";
 import ShowCard from "./Products/ShowCard.tsx";
 import ProductPage from "./Products/ProductPage.tsx";
 import type { InstrumentProps } from "./types/InstrumentTypes.ts";
-
+import APIUrl from "./types/APIUrl.ts";
 function Body() {
   const [instruments, setInstruments] = useState<InstrumentProps[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "http://localhost:3000/instruments";
-
   useEffect(() => {
     const fetchInstruments = async () => {
       try {
-        const response = await axios.get<InstrumentProps[]>(API_URL);
+        const response = await axios.get<InstrumentProps[]>(APIUrl()+"/instruments");
         setInstruments(response.data);
       } catch (error) {
         console.error("Error fetching data from NestJS API:", error);
