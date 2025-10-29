@@ -1,53 +1,70 @@
 import Header from "../Header";
-import { useState} from "react";
+import { useState } from "react";
 import type { UserandPasswordProps } from "../types/UserandPassword";
 import axios from "axios";
 import APIUrl from "../types/APIUrl";
 import {useNavigate} from "react-router-dom";
+
 function LoginPage() {
-  const [userData, setUserData] = useState<UserandPasswordProps[]>([]);
   const navigate = useNavigate();
-  const fetchUserData = async () => {
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchAndValidateUser = async (email: string, password: string) => {
+    setLoading(true);
+    setError(null);
+    let allUsers: UserandPasswordProps[] = [];
+
     try {
       const response = await axios.get<UserandPasswordProps[]>(
         APIUrl() + "/users"
       );
-      setUserData(response.data);
+      allUsers = response.data;
+      console.log("Fetched user data:", allUsers);
+
+      const user = allUsers.find(
+        (u) =>
+          (u.email === email || u.username === email) &&
+          u.password === password
+      );
+
+      if (user) {
+        alert("Login successful!");
+        
+        switch (user.position) {
+          case "customer":
+            navigate("/"); // ไปที่หน้าลูกค้า
+            break;
+          case "sale":
+            navigate("/SalesPage"); // ไปที่หน้าพนักงานขาย
+            break;
+          default:
+            navigate("/"); // กรณีอื่นๆ ไปที่หน้าหลัก
+            break;
+        }
+      } else {
+        alert("Invalid email or password.");
+        setError("Invalid email or password.");
+      }
     } catch (error) {
-      console.error("Error fetching user data:", error);
-      setUserData([]);
+      console.error("Error during login:", error);
+      alert("An error occurred during login. Please try again.");
+      setError("An error occurred during login.");
     } finally {
-      console.log("Fetched user data:", userData);
+      setLoading(false);
     }
   };
 
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    fetchUserData();
+    
     const form = e.currentTarget;
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
 
-   
-
-    const user = userData.find(
-      (user) =>
-        (user.email === email || user.username === email) &&
-        user.password === password
-    );
-    if (user) {
-      alert("Login successful!");
-      switch (user.position) {
-        case "customer":
-          navigate("/"); // ไปที่หน้าลูกค้า
-          break;
-        case "sale":
-          navigate("/salepage"); // ไปที่หน้าพนักงานขาย
-          break;
-      }
-    } else {
-      alert("Invalid email or password.");
-    }
+    // เรียกฟังก์ชันตรวจสอบและนำทาง
+    fetchAndValidateUser(email, password);
   };
 
   return (
@@ -59,12 +76,14 @@ function LoginPage() {
             {" "}
             เข้าสู่ระบบ{" "}
           </h1>
+          {/* แสดงข้อความ Error ถ้ามี */}
+          {error && <div className="text-red-600 text-center mb-4">{error}</div>}
 
           <form
-            onSubmit={(e) => handleSubmit(e)}
+            onSubmit={handleSubmit}
             className="mx-auto w-full max-w-md rounded-2xl border bg-white shadow-sm p-6"
           >
-            {/* Email */}
+            {/* ... โค้ด Input Email และ Password เดิม ... */}
             <label htmlFor="email" className="block text-sm font-medium mb-1">
               Email
             </label>
@@ -76,8 +95,6 @@ function LoginPage() {
               placeholder="Email หรือ Username"
               className="w-full rounded-md border px-3 py-2 mb-4 outline-none focus:ring-2 focus:ring-black/50"
             />
-
-            {/* Password */}
             <label
               htmlFor="password"
               className="block text-sm font-medium mb-1"
@@ -93,17 +110,16 @@ function LoginPage() {
               className="w-full rounded-md border px-3 py-2 mb-4 outline-none focus:ring-2 focus:ring-black/50"
             />
 
-            {/* ปุ่ม */}
+            {/* ปุ่ม Sign In ที่มีการจัดการ Loading */}
             <button
               type="submit"
-              className="w-full rounded-md bg-black text-white py-2.5 hover:opacity-90"
-              onClick={() => {}}
+              className="w-full rounded-md bg-black text-white py-2.5 hover:opacity-90 disabled:opacity-50"
+              disabled={loading} // ปิดปุ่มระหว่างรอ API
             >
-              {" "}
-              Sign In{" "}
+              {loading ? "กำลังเข้าสู่ระบบ..." : "Sign In"}
             </button>
 
-            {/* ลิงก์ย่อย */}
+            {/* ... ลิงก์ย่อยเดิม ... */}
             <div className="flex items-center justify-between text-sm mt-3">
               <a href="#" className="text-gray-600 hover:text-black">
                 Forgot password?
