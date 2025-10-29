@@ -22,6 +22,15 @@ export default function OrderPage() {
       image:
         "https://www.musicarms.net/wp-content/uploads/2018/06/Fender-Standard-Stratocaster-HSS-%E0%B8%81%E0%B8%B5%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2-red.jpg",
     },
+    {
+      id: "2",
+      name: "Kemper Profiler Stage มัลติเอฟเฟค",
+      variant: "Effect • Black",
+      price: 45900,
+      qty:  2,
+      image:
+        "https://www.musicarms.net/wp-content/uploads/2020/03/Kemper-Profiler-Stage-5-300x300.jpg",
+    },
   ]);
 
   const [fullName, setFullName] = useState("");
