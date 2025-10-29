@@ -1,7 +1,4 @@
-// AddProductModal.tsx
-import axios from "axios";
 import React, { useState, useEffect } from "react";
-import APIUrl from "../types/APIUrl";
 
 interface AddProductModalProps {
   open: boolean;

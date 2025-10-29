@@ -16,8 +16,6 @@ function Footer(){
               <p>อีเมล์ : <a href="mailto:music2hand@gmail.com" className="underline">music2hand@gmail.com</a></p>
               <p>เบอร์โทร : 098-xxx-xxxx</p>
             </div>
-
-            
             <div className="mt-4 flex items-center gap-4 justify-center md:justify-start">
               
               <a href="#" aria-label="Facebook" className="p-2 rounded-full border hover:bg-gray-50">
