@@ -2,7 +2,6 @@ import  { useMemo, useState , useEffect} from "react";
 import TH from "./SalesTH";
 import ProductRow from "./ProductRow";
 import { Link } from "react-router-dom";
-import type Home from "../Home";
 import API_Url from "../types/APIUrl";
 import type { InstrumentProps } from "../types/InstrumentTypes";
 import axios from "axios";
@@ -27,9 +26,6 @@ function HomeSalesPage() {
 
       }
     }
-    
-    console.log("Products fetched")
-    console.log(products)
     ;
   // ดึงข้อมูลสินค้าเมื่อ component โหลด
   useEffect(() => {
@@ -38,9 +34,9 @@ function HomeSalesPage() {
   // เพิ่มสินค้า
 
   const handleAdd = () => {
-
+   
   };
-
+  
   // ดูสินค้า
   const handleView = (p: InstrumentProps) => {
     alert("Product Details:\n" + 
@@ -48,7 +44,7 @@ function HomeSalesPage() {
       "Brand: " + p.brand + "\n" +
       "Price: " + p.price.toLocaleString() + " บาท\n" +
       "Stock: " + p.stock + "\n" +
-      "Description: " + p.description
+      "Description: " + p.description + "\n"
     );
   };
 
@@ -59,7 +55,8 @@ function HomeSalesPage() {
     const priceStr = prompt("Enter new price:", p.price.toString()) || p.price.toString();
     const stockStr = prompt("Enter new stock:", p.stock.toString()) || p.stock.toString();
     const description = prompt("Enter new description:", p.description) || p.description;
-
+    const newImageUrl = prompt("Enter new image URL:", p.imageUrl) || p.imageUrl;
+    
     axios.put(API_Url() + "/instruments/" + p._id, {
       ...p,
       model: name,
@@ -109,6 +106,7 @@ function HomeSalesPage() {
     </div>
   </div>
 
+
       {/* Search */}
       <div className="max-w-6xl mx-auto px-4 mb-4">
         <input
@@ -116,7 +114,7 @@ function HomeSalesPage() {
           placeholder="ค้นหาชื่อสินค้า..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full sm:w-1/3 border rounded-xl px-3 py-2 shadow-sm"
+          className="w-full sm:w-1/3 border rounded-xl px-3 py-2 shadow-sm focus:ring-2 focus:ring-indigo-500"
         />
       </div>
 
@@ -151,7 +149,9 @@ function HomeSalesPage() {
           </tbody>
         </table>
       </div>
+      
     </main>
+    
   );
 }
 export default HomeSalesPage;
