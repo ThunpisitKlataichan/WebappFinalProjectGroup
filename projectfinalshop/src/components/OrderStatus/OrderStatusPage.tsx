@@ -9,8 +9,8 @@ const MOCK: Order[] = [
   {
     id: "OD-20251030-001",
     phone: "0800000001",
-    customer: "คุณนที รุ่งแสง",
-    total: 22490,
+    customer: "ธัญพิสิษฐ์ กระต่ายจันทร์",
+    total: 120480,
     status: "out_for_delivery",
     carrier: "Kerry",
     trackingNo: "KEX123456789TH",
@@ -24,8 +24,8 @@ const MOCK: Order[] = [
   {
     id: "OD-20251029-112",
     phone: "0811111111",
-    customer: "คุณพัดชา อัครเดช",
-    total: 890,
+    customer: "ภูมิภัทร มั่งศิลป์",
+    total: 88990,
     status: "delivered",
     carrier: "Thailand Post",
     trackingNo: "TH1234567890",
@@ -39,16 +39,16 @@ const MOCK: Order[] = [
   {
     id: "OD-20251028-019",
     phone: "0822222222",
-    customer: "คุณกวิน อนันต์",
-    total: 21600,
+    customer: "รัฐฉัตร คงธนศุภบวร",
+    total: 80680,
     status: "pending_payment",
     timeline: [{ time: "2025-10-28 09:00", text: "สร้างคำสั่งซื้อ" }],
   },
   {
     id: "OD-20251027-404",
     phone: "0833333333",
-    customer: "คุณพลอยไพลิน แสงเพชร",
-    total: 1250,
+    customer: "สิรภพ มะโนเทพ",
+    total: 190250,
     status: "cancelled",
     timeline: [
       { time: "2025-10-27 11:22", text: "สร้างคำสั่งซื้อ" },
