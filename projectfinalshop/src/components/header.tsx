@@ -21,7 +21,7 @@ function Header () {
         </div>
 
         <ul className="flex items-center space-x-6">
-
+          <li><NavLink to="/SalesPage">Admin</NavLink></li>
           <li><NavLink to="/order">Order</NavLink></li>
           <li><NavLink to="/login">Login</NavLink></li>
         </ul>
