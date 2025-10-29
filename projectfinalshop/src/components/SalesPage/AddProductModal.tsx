@@ -36,6 +36,7 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
     onConfirm(form, file);
     console.log(form)
     console.log(file)
+    
     onClose();
   };
 
