@@ -192,6 +192,8 @@ function HomeSalesPage() {
     const description =
       prompt("Enter new description:", p.description) || p.description;
     const type = prompt("Enter new product category:", p.type) || p.type;
+
+    const imageUrl = prompt("Enter new product URL-Image:")||p.imageUrl;
     // (ควรถาม imageUrl และ isShown ด้วย)
 
     setStatusMessage("กำลังอัปเดต...");
@@ -204,7 +206,7 @@ function HomeSalesPage() {
         price: parseFloat(priceStr),
         stock: parseInt(stockStr),
         description: description,
-        // imageUrl: ..., (ยังไม่ได้อัปเดต)
+        imageUrl : imageUrl
         // isShown: ..., (ยังไม่ได้อัปเดต)
       });
 
