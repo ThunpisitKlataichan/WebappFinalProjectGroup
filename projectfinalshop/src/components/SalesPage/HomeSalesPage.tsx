@@ -7,6 +7,7 @@ import type { InstrumentProps } from "../types/InstrumentTypes";
 import axios from "axios";
 import AddProductModal from "./AddProductModal";
 
+
 function HomeSalesPage() {
   const [products, setProducts] = useState<InstrumentProps[]>([]);
   const [openModal, setOpenModal] = useState(false);

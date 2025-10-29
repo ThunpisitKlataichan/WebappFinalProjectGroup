@@ -74,6 +74,15 @@ export default function AddProductModal({ open, onClose, onConfirm }: AddProduct
                 className="w-full px-3 py-2 rounded-xl border"
               />
             </div>
+<div>
+              <label className="block text-sm mb-1">หมวดหมู่</label>
+              <input
+                value={form.type}
+                onChange={(e) => setForm({ ...form, type: e.target.value })}
+                className="w-full px-3 py-2 rounded-xl border"
+              />
+            </div>
+            
             <div>
               <label className="block text-sm mb-1">ราคา (บาท)</label>
               <input
