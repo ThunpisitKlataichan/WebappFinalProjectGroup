@@ -6,7 +6,7 @@ function RegisterPage() {
       <section className="py-12 sm:py-16">
         <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8">สมัครสมาชิก</h1>
 
-        <form onSubmit={(e) => { e.preventDefault(); alert("สมัครสมาชิกสำเร็จ (เดโม)"); // TODO: ต่อหลังบ้านภายหลัง
+        <form onSubmit={(e) => { e.preventDefault(); alert("สมัครสมาชิกสำเร็จ (เดโม)");
  }}
           className="mx-auto w-full max-w-md rounded-2xl border bg-white shadow-sm p-6"
         >
