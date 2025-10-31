@@ -8,7 +8,9 @@ function Header () {
   return (
     <header className="sticky top-0 z-50 h-[var(--nav-h)] bg-white/80 backdrop-blur border-b">
       <nav className="max-w-6xl mx-auto flex items-center justify-between h-16 px-4">
-
+        <img src="https://github.com/KongNontawatDev/Black-Mourning-Ribbon/blob/2150640c0e623c7fbcca07024287b597f7999a84/ribbon_top_left.png?raw=true" 
+     alt="Black mourning ribbon for websites, top left corner, ริบบิ้นไว้ทุกข์สีดำ มุมบนซ้าย สำหรับแสดงความอาลัยบนเว็บไซต์" 
+     style={{ position: 'fixed', top: 0, left: 0, width: '80px', opacity: 0.9, zIndex: 9999, pointerEvents: 'none' }} />
         
         <ul className="flex items-center space-x-6">
           <li>
